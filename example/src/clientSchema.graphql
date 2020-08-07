@@ -1,0 +1,20 @@
+# taken from https://relay.dev/docs/en/experimental/a-guided-tour-of-relay#client-only-data-client-schema-extensions
+
+enum FetchStatus {
+  FETCHED
+  PENDING
+  ERRORED
+}
+
+type FetchState {
+  # You can reuse client-only types to define other types
+  status: FetchStatus
+
+  # You can also reference regular server types
+  startedBy: User!
+}
+
+extend type TodoItem {
+  # You can extend server types with client-only types
+  fetchState: FetchState
+}

@@ -110,10 +110,17 @@ v5 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
+  "name": "status",
+  "storageKey": null
+},
+v6 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
   "name": "cursor",
   "storageKey": null
 },
-v6 = [
+v7 = [
   (v1/*: any*/),
   {
     "kind": "Literal",
@@ -300,13 +307,7 @@ return {
                     "name": "trackingId",
                     "storageKey": null
                   },
-                  {
-                    "alias": null,
-                    "args": null,
-                    "kind": "ScalarField",
-                    "name": "status",
-                    "storageKey": null
-                  },
+                  (v5/*: any*/),
                   {
                     "alias": null,
                     "args": null,
@@ -318,7 +319,7 @@ return {
                 ],
                 "storageKey": null
               },
-              (v5/*: any*/)
+              (v6/*: any*/)
             ],
             "storageKey": null
           }
@@ -336,7 +337,7 @@ return {
       },
       {
         "alias": null,
-        "args": (v6/*: any*/),
+        "args": (v7/*: any*/),
         "concreteType": "TodoItemConnection",
         "kind": "LinkedField",
         "name": "todosConnection",
@@ -373,11 +374,28 @@ return {
                     "name": "completed",
                     "storageKey": null
                   },
-                  (v4/*: any*/)
+                  (v4/*: any*/),
+                  {
+                    "kind": "ClientExtension",
+                    "selections": [
+                      {
+                        "alias": null,
+                        "args": null,
+                        "concreteType": "FetchState",
+                        "kind": "LinkedField",
+                        "name": "fetchState",
+                        "plural": false,
+                        "selections": [
+                          (v5/*: any*/)
+                        ],
+                        "storageKey": null
+                      }
+                    ]
+                  }
                 ],
                 "storageKey": null
               },
-              (v5/*: any*/)
+              (v6/*: any*/)
             ],
             "storageKey": null
           },
@@ -399,7 +417,7 @@ return {
       },
       {
         "alias": null,
-        "args": (v6/*: any*/),
+        "args": (v7/*: any*/),
         "filters": null,
         "handle": "connection",
         "key": "TodoList_query_todosConnection",

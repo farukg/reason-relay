@@ -4,6 +4,9 @@ module TodoFragment = [%relay.fragment
     id
     text
     completed
+    fetchState {
+      status
+    }
   }
 |}
 ];
@@ -52,8 +55,7 @@ let make = (~checked, ~todoItem as todoItemRef) => {
           type_="checkbox"
           checked
           onChange={_ => {
-            let completed =
-              !Belt.Option.getWithDefault(todoItem.completed, false);
+            let completed = !Belt.Option.getWithDefault(todoItem.completed, false);
             UpdateMutation.commitMutation(
               ~environment=RelayEnv.environment,
               ~variables={
