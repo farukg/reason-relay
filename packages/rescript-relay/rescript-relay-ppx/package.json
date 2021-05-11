@@ -68,7 +68,7 @@
     "refmterr": "*"
   },
   "optionalDependencies": {
-     "@reason-native/rely": "*",
+     "@reason-native/rely": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*",
