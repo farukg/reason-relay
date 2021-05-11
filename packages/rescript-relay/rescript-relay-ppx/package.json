@@ -64,9 +64,11 @@
     "@opam/ocaml-migrate-parsetree": "1.4.0",
     "@opam/ppx_tools_versioned": "5.2.3",
     "@opam/ppxlib": "*",
-    "@reason-native/rely": "*",
-    "ocaml": "4.6.1002",
+    "ocaml": "4.12.0",
     "refmterr": "*"
+  },
+  "optionalDependencies": {
+     "@reason-native/rely": "*",
   },
   "devDependencies": {
     "@opam/merlin": "*",
