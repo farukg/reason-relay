@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Starter Reason Esy Pesy Project",
   "esy": {
-    "build": "refmterr dune build -p #{self.name}",
+    "build": "dune build -p #{self.name}",
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
       "releasedBinaries": [
@@ -58,19 +58,19 @@
     "doc-path": "esy echo #{self.target_dir}/default/_doc/_html/index.html"
   },
   "dependencies": {
-    "@esy-ocaml/reason": "*",
+    "@opam/reason": "3.7.0",
+    "@esy-ocaml/reason": "3.7.0",
+    "@reason-native/rely": "*",
+    "@reason-native/console": "*",
+    "@reason-native/pastel": "*",
     "@opam/dune": "*",
-    "@opam/graphql_parser": "0.12.2",
-    "@opam/ocaml-migrate-parsetree": "1.4.0",
-    "@opam/ppx_tools_versioned": "5.2.3",
+    "@opam/menhir": "20210419",
+    "@opam/merlin-extend": "0.6",
+    "@opam/graphql_parser": "*",
+    "@opam/ocaml-migrate-parsetree": "*",
+    "@opam/ppx_tools_versioned": "5.4.0",
     "@opam/ppxlib": "*",
     "ocaml": "4.12.0",
-    "refmterr": "*"
-  },
-  "optionalDependencies": {
-     "@reason-native/rely": "*"
-  },
-  "devDependencies": {
     "@opam/merlin": "*",
     "@opam/odoc": "*"
   }
